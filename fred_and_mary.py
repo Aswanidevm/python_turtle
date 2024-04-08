@@ -18,13 +18,15 @@ mary.left(180)
 #     i += 1
 #
 # print("Finished forwarding values.")  # Informative output
-
+target = 120
 while True:
-    value = fred.xcor()
+    fvalue = fred.xcor()
+    mvalue = mary.xcor()
+    if fvalue == (target) or mvalue == -(target):
+        break
     fred.forward(1)
-    mary.forward(1)
-    if value == 100:
-       break
+    mary.forward(2)
+
 print("Reached the limit")
 
 
