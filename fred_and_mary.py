@@ -3,8 +3,8 @@ fred = turtle.Turtle()
 mary = turtle.Turtle()
 
 import random
-fspeed = random.randint(1, 10)
-mspeed = random.randint(1, 10)
+fspeed = random.randint(1, 23)
+mspeed = random.randint(1, 20)
 print(fspeed , mspeed)
 
 fred.shape("turtle")
@@ -23,15 +23,24 @@ mary.left(180)
 #     i += 1
 #
 # print("Finished forwarding values.")  # Informative output
-target = 120
-while True:
+target = 159
+# while True:
+#     fvalue = fred.xcor()
+#     mvalue = mary.xcor()
+#     print(fvalue , mvalue)
+#     fred.forward(fspeed)
+#     mary.forward(mspeed)
+#     if fvalue >= (target) or mvalue <= -(target):
+#         break
+
+while  fred.xcor() <= (target) and mary.xcor() >= -(target):
     fvalue = fred.xcor()
     mvalue = mary.xcor()
+    print(fvalue , mvalue)
     fred.forward(fspeed)
     mary.forward(mspeed)
-    if fvalue == (target) or mvalue == -(target):
-        break
-
+    # if fvalue >= (target) or mvalue <= -(target):
+    #     break
 
 print("Reached the limit")
 
