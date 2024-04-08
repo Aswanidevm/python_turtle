@@ -2,6 +2,11 @@ import turtle
 fred = turtle.Turtle()
 mary = turtle.Turtle()
 
+import random
+fspeed = random.randint(1, 10)
+mspeed = random.randint(1, 10)
+print(fspeed , mspeed)
+
 fred.shape("turtle")
 fred.color("blue")
 mary.shape("turtle")
@@ -22,10 +27,11 @@ target = 120
 while True:
     fvalue = fred.xcor()
     mvalue = mary.xcor()
+    fred.forward(fspeed)
+    mary.forward(mspeed)
     if fvalue == (target) or mvalue == -(target):
         break
-    fred.forward(1)
-    mary.forward(2)
+
 
 print("Reached the limit")
 
