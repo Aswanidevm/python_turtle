@@ -24,6 +24,8 @@ mary.left(180)
 #
 # print("Finished forwarding values.")  # Informative output
 target = 159
+x=1
+y=1
 # while True:
 #     fvalue = fred.xcor()
 #     mvalue = mary.xcor()
@@ -37,16 +39,17 @@ while  fred.xcor() <= (target) and mary.xcor() >= -(target):
     fvalue = fred.xcor()
     mvalue = mary.xcor()
     print(fvalue , mvalue)
-    fred.forward(fspeed)
-    mary.forward(mspeed)
+    fred.forward(x)
+    mary.forward(y)
+    x = x+1
+    y = x
+    fred.tilt(10)
+    mary.tilt(10)
+    # fred.left(5)
+    # fred.turtlesize(2)
     # if fvalue >= (target) or mvalue <= -(target):
     #     break
 
 print("Reached the limit")
-
-
-
-
-
 
 turtle.done()
